@@ -7,23 +7,37 @@
 }
 body{
     background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
-    width: 100vw;
     height:100vh;
+    width: 100vw;
+    scrollbar-width:auto;
+    scrollbar-color: #f05420b7 #f28c8c;
+    overflow-x: hidden;
 }
 .name{
-    padding-top: 40px;
-    height: 10%;
+    margin-top: 40px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 70px;
+    font-size:min(4rem, 12vw);
+    text-align: center;
     color: #f05420b7;
     text-decoration: underline;
     text-decoration-style:wavy;
     text-decoration-color: #f28c8c;
-    margin-bottom: 30px;
+    margin-bottom: min(5rem,5vw);
     text-underline-offset: 7px;
+}
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f28c8c;
+}
+::-webkit-scrollbar-thumb {
+    background: #f05420b7;
+    border-radius: 6px;
 }
 .container{
     width: 100%;
@@ -41,7 +55,7 @@ body{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr); 
-    gap: 30px;
+    gap:1rem;
     align-items: center;
     justify-items: center;
     border-radius: 10px;
@@ -52,13 +66,13 @@ body{
 }
 .box{
     border: 5px solid white;
-    width:120px;
-    height: 120px;
+    width:min(10rem, 20vw);
+    height: min(10rem, 20vw);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    font-size:100px;
+    font-size:min(6rem, 15vw);
     color:#fcb69fb7;
     background-color: #785e3d;
 }
